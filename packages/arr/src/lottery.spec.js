@@ -5,7 +5,7 @@ describe('lottery / arr.lottery function', () => {
         test("should be a function", () => {
             expect(typeof lottery).toBe('function')
         })
-    });
+    }); 
 
     describe(`Does it give a random array item?`, () => {
         test('when given an empty array', () => {

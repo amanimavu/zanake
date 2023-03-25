@@ -10,13 +10,17 @@ export interface PropertyFilterProps {
     onChange: (columns: ColumnsType<any>) => void;
 }
 
+//props takes the shape of PropertyFilterProps
 const PropertyFilter = (props: PropertyFilterProps) => {
     const [checked, setChecked] = useState(false);
     const [indeterminate, setIndeterminate] = useState(false);
     const [value, setValue] = useState<CheckboxValueType[]>([]);
 
     const options = useMemo(() => {
-        return (props.columns as any[]).map((column) => {
+        //cast props.columns to type any[]
+        // go through each column in props.columns and return
+        // an array of objects with keys, value and label
+        return (props.columns as any[]).map((column) => { 
             return {
                 value: column.key,
                 label: column?.title,
@@ -46,8 +50,11 @@ const PropertyFilter = (props: PropertyFilterProps) => {
     const onSelect = (selected: CheckboxValueType[]) => {
         setValue(selected);
         setChecked(selected.length === options.length);
+        // !! is a double negation operator used to convert a value to its corresponding boolean value
         setIndeterminate(!!selected.length && selected.length < options.length);
     };
+
+    // the section after this comment will be analysed tomorrow
 
     const content = (
         <Fragment>

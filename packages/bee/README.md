@@ -1,6 +1,6 @@
 # @zanake/bee
 
-An [Ant Design](https://ant.design/) package that bulds on top Ant Design React components to provide "plug and play" components for enterprise projects.
+An [Ant Design](https://ant.design/) package that builds on of top Ant Design React components to provide "plug and play" components for enterprise projects.
 
 > **bee** . _noun_
 >

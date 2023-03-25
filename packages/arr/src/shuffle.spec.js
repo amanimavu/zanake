@@ -2,7 +2,7 @@ const shuffleTs = require('./lib/shuffle');
 const shuffle = shuffleTs["default"];
 
 describe('Check for values in the array', () => {
-	let array1 = [1,2,3,4,5,6,7]
+	let array1 = [1,2,3,4,5,6,7] 
 	let array2 = [7,6,5,4,3,2,1]
 	let shuffled1 = shuffle([...array1])
 	it('returns an array of the same length', () => {
